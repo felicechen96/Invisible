@@ -1,5 +1,5 @@
 // NON MODIFICARE E NON CANCELLARE
-
+/*
 window.addEventListener("load", function() {
   if (getAudioContext().state == 'suspended') {
     let audioIcon = document.querySelector("#pulsante-audio > span");
@@ -8,6 +8,7 @@ window.addEventListener("load", function() {
     } 
   }
 });
+*/
 
 function apriChiudiInfo() {
   var info = document.getElementById("pannello-info");
