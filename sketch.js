@@ -232,6 +232,9 @@ function draw()
  
 }
 
+function touchStarted() {
+  getAudioContext().resume();
+}
 
 // function setupResizable() {
 //   centro = createVector(width/2, height/2);
