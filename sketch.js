@@ -14,6 +14,7 @@ let p2 ;
 let step=0;
 
 let centro;
+let modelReadyFlag=false;
 
 function setup() {
   
@@ -48,6 +49,7 @@ function setup() {
 
 function modelReady() {
   console.log("Model ready!");
+   modelReadyFlag=true;
 }
 
 // A function to draw ellipses over the detected keypoints
@@ -215,9 +217,16 @@ function draw()
     textSize(30);
     text("By  Zhijie Chen",400,350);
     textSize(15);
-    text("Click to start",520,400);
+   if(modelReadyFlag)
+      {
+        text("Click to start",520,400);
+      }
+    else
+      {
+        text("Loading model...",520,400);
+      }
     
-    if(mouseIsPressed && mouseY<600)
+    if(modelReadyFlag && mouseIsPressed && mouseY<600)
       {
         step=1;
       }
