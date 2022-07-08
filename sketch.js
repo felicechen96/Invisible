@@ -219,11 +219,11 @@ function draw()
     textSize(15);
    if(modelReadyFlag)
       {
-        text("Click to start",520,400);
+        text("Fare clic per iniziare",520,400);
       }
     else
       {
-        text("Loading model...",520,400);
+        text("modello di carico...",520,400);
       }
     
     if(modelReadyFlag && mouseIsPressed && mouseY<600)
