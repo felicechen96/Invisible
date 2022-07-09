@@ -213,7 +213,7 @@ function draw()
     textSize(80);
     stroke(255);
     fill(255);
-    text("Invisible",200,200);
+    text("furtività",200,200);
     textSize(30);
     text("By  Zhijie Chen",400,350);
     textSize(15);
