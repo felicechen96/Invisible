@@ -258,7 +258,7 @@ function touchStarted() {
 
 function keyPressed()
 {
-  if (keyCode === SPACE) {
+  if (key == ' ') {
    pause =!pause;
    console.log(" pause  "+pause  );
   }
