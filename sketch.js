@@ -16,6 +16,8 @@ let step=0;
 let centro;
 let modelReadyFlag=false;
 
+let pause=false;
+
 function setup() {
   
   createCanvas(720, 720);
@@ -180,19 +182,19 @@ function drawEffect()
   let amp = bass+lowMid+mid+highMid+treble;
   console.log(amp);
   
-  if(amp>350.0)
+  if(amp>350.0 && )
   {
     start=true;
   }
   
-  if(start && frameCount%6==0)
+  if(start && frameCount%6==0 && !pause)
   {
      drawLines(p1.x,p1.y,amp,highMid);
      drawLines(p2.x,p2.y,amp,highMid);
      console.log(amp+"   "+highMid  );
      //radius+=2;
   }
-  if(start && amp>300.0 && frameCount%3==0)
+  if(start && amp>300.0 && frameCount%3==0 && !pause)
   {
      drawLines1(p1.x,p1.y,amp,highMid);
      drawLines1(p2.x,p2.y,amp,highMid);
@@ -253,3 +255,10 @@ function touchStarted() {
 //   resizeCanvas(windowWidth, windowHeight);
 //   setupResizable();
 // }
+
+function keyPressed()
+{
+  if (keyCode === SPACE) {
+   pause =!pause;
+  }
+}
