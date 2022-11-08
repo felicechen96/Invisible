@@ -182,7 +182,7 @@ function drawEffect()
   let amp = bass+lowMid+mid+highMid+treble;
   //console.log(amp);
   
-  if(amp>350.0 && )
+  if(amp>350.0 )
   {
     start=true;
   }
