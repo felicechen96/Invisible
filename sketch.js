@@ -180,7 +180,7 @@ function drawEffect()
   treble = fft.getEnergy("treble");
   
   let amp = bass+lowMid+mid+highMid+treble;
-  console.log(amp);
+  //console.log(amp);
   
   if(amp>350.0 && )
   {
@@ -191,14 +191,14 @@ function drawEffect()
   {
      drawLines(p1.x,p1.y,amp,highMid);
      drawLines(p2.x,p2.y,amp,highMid);
-     console.log(amp+"   "+highMid  );
+    // console.log(amp+"   "+highMid  );
      //radius+=2;
   }
   if(start && amp>300.0 && frameCount%3==0 && !pause)
   {
      drawLines1(p1.x,p1.y,amp,highMid);
      drawLines1(p2.x,p2.y,amp,highMid);
-     console.log(amp+"   "+highMid  );
+    // console.log(amp+"   "+highMid  );
      radius+=2;
   }
   
@@ -260,5 +260,6 @@ function keyPressed()
 {
   if (keyCode === SPACE) {
    pause =!pause;
+   console.log(" pause  "+pause  );
   }
 }
